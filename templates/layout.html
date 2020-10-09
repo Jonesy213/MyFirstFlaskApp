@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MyFlaskApp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  </head>
+  <body>
+    {% include 'includes/_navbar.html' %}  <!-- # Use an '_' as the file name as it's only a partial file -->
+    <div class="container">
+      {% include 'includes/_messages.html' %}
+      {% block body %}{% endblock %}  <!-- this will make it so you can insert text into here -->
+  </div>
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
+    <script src="https://cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+    <script>
+      CKEDITOR.replace('editor');
+      // Then put whatever ID you want to replace
+    </script>
+  </body>
+</html>

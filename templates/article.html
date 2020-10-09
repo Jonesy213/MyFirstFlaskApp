@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>{{article[1]}}</h1>
+  <div class="text-secondary">
+    <p>By: {{article[2]}} on {{article[4]}}</p>
+  </div>
+  <hr>
+  <div class="">
+    {{article[3] | safe}}
+  </div>
+  <a href="/edit_article/{{article[0]}} class="btn button-success"">Edit</a>
+{% endblock %}
